@@ -15,6 +15,30 @@ items.push(new Item('Conjured Mana Cake', 3, 6));
 
 function update_quality() {
   for (var i = 0; i < items.length; i++) {
+
+    if (items[i].name === 'Sulfuras, Hand of Ragnaros') {
+      continue
+    }
+
+    if (items[i].name === 'Aged Brie') {
+      items[i].sell_in -= 1
+
+      if (items[i].quality < 50) {
+        items[i].quality += 1
+      }
+      continue
+    }
+
+    if (items[i].name === 'Backstage passes to a TAFKAL80ETC concert') {
+
+
+
+
+      continue
+    }
+
+
+
     if (items[i].name != 'Aged Brie' && items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
       if (items[i].quality > 0) {
         if (items[i].name != 'Sulfuras, Hand of Ragnaros') {
